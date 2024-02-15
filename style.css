@@ -43,6 +43,7 @@ main {
     padding-inline: 1rem;
     font-size: 2rem;
     text-align: end;
+    background-color: white;
 }
 
 button {

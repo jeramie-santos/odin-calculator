@@ -17,28 +17,34 @@ const del = document.querySelector('#delete');
 const decimal = document.querySelector('#decimal');
 const input = document.querySelector('#input-number');
 
-let firstNum;
-let operator;
-let secondNum;
+
+let firstNum = "";
+let operator = "";
+let secondNum = "";
+let displayValue = "";
+
 
 function getSum(num1,num2){
-   input.value = num1 + num2;
+    input.textContent = num1 + num2;
+    displayValue = input.textContent;
 }
 
 function getDifference(num1,num2){
-   input.value = num1 - num2;
+    input.textContent = num1 - num2;
+    displayValue = input.textContent;
 }
 
 function getProduct(num1,num2){
-   input.value = num1 * num2;
+    input.textContent = num1 * num2;
+    displayValue = input.textContent;
 }
 
 function getQuotient(num1,num2){
-    input.value = num1 / num2;
+    input.textContent = num1 / num2;
+    displayValue = input.textContent;
 }
 
 function operate(){
-    let displayValue = input.value;
     const operation = displayValue.split(" ");
 
     firstNum = Number(operation[0]);
@@ -54,76 +60,106 @@ function operate(){
     } else if (operator === "/"){
         getQuotient(firstNum,secondNum);
     }
-
 }
 
 
 equal.addEventListener('click', operate);
 
 del.addEventListener('click', () => {
-    input.value = "";
+    input.textContent = "";
+    displayValue = "";
 });
 
 zero.addEventListener('click', () =>{
-    input.value += "0";
+    input.textContent += "0";
+    displayValue += "0";
+    console.log(displayValue);
 });
 
 one.addEventListener('click', () =>{
-    input.value += "1";
+    input.textContent += "1";
+    displayValue += "1";
+    console.log(displayValue);
 });
 
 two.addEventListener('click', () =>{
-    input.value += "2";
+    input.textContent += "2";
+    displayValue += "2";
+    console.log(displayValue);
 });
 
 three.addEventListener('click', () =>{
-    input.value += "3";
+    input.textContent += "3";
+    displayValue += "3";
+    console.log(displayValue);
 });
 
 four.addEventListener('click', () =>{
-    input.value += "4";
+    input.textContent += "4";
+    displayValue += "4";
+    console.log(displayValue);
 });
 
 five.addEventListener('click', () =>{
-    input.value += "5";
+    input.textContent += "5";
+    displayValue += "5";
+    console.log(displayValue);
 });
 
 six.addEventListener('click', () =>{
-    input.value += "6";
+    input.textContent += "6";
+    displayValue += "6";
+    console.log(displayValue);
 });
 
 seven.addEventListener('click', () =>{
-    input.value += "7";
+    input.textContent += "7";
+    displayValue += "7";
+    console.log(displayValue);
 });
 
 eight.addEventListener('click', () =>{
-    input.value += "8";
+    input.textContent += "8";
+    displayValue += "8";
+    console.log(displayValue);
 });
 
 nine.addEventListener('click', () =>{
-    input.value += "9";
+    input.textContent += "9";
+    displayValue += "9";
+    console.log(displayValue);
 });
 
 decimal.addEventListener('click', () =>{
-    input.value += ".";
+    input.textContent += ".";
+    displayValue += ".";
+    console.log(displayValue);
 });
 
 
 
 add.addEventListener('click', () => {
-    input.value += " + ";
+    displayValue += " + ";
+    console.log(displayValue);
+    input.textContent = " ";
 });
 
 minus.addEventListener('click', () => {
-    input.value += " - ";
+    displayValue += " - ";
+    console.log(displayValue);
+    input.textContent = " ";
 });
 
 multiply.addEventListener('click', () => {
-    input.value += " * ";
+    displayValue += " * ";
+    console.log(displayValue);
+    input.textContent = " ";
 });
 
 divide.addEventListener('click', () => {
-    input.value += " / ";
+    displayValue += " / ";
+    console.log(displayValue);
+    input.textContent = " ";
 });
 
 
