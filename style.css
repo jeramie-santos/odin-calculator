@@ -45,6 +45,7 @@ main {
 
 button {
     flex: 1;
+    border-radius: .5rem;
 }
 
 .num {
