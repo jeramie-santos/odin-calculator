@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    line-height: 1.6;
+}
+
+body, button {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    background-color: #313638;
+    border: 1px solid #313638;
+    border-radius: 1rem;
+    padding: 2rem;
+    height: 45vh;
+    width: 30vh;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    gap: .5rem;
+}
+
+#input-number {
+    width: 100%;
+    padding-inline: 1rem;
+}
+
+button {
+    flex: 1;
+}
+
+.num {
+    background-color: grey;
+    color: white;
+}
+
+.operator {
+    background-color: orange;
+    color: white;
+}
+
+#delete {
+    background-color: rgb(216, 60, 60);
+    color: white;
+}
+
+
+
+
