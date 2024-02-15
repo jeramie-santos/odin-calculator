@@ -19,7 +19,7 @@ const input = document.querySelector('#input-number');
 
 let firstNum;
 let operator;
-let lastNum;
+let secondNum;
 
 function getSum(num1,num2){
    input.value = num1 + num2;
@@ -43,16 +43,16 @@ function operate(){
 
     firstNum = Number(operation[0]);
     operator = operation[1];
-    lastNum = Number(operation[2]);
+    secondNum = Number(operation[2]);
 
     if (operator === "+"){
-        getSum(firstNum,lastNum);
+        getSum(firstNum,secondNum);
     } else if (operator === "-"){
-        getDifference(firstNum,lastNum);
+        getDifference(firstNum,secondNum);
     } else if (operator === "*"){
-        getProduct(firstNum,lastNum);
+        getProduct(firstNum,secondNum);
     } else if (operator === "/"){
-        getQuotient(firstNum,lastNum);
+        getQuotient(firstNum,secondNum);
     }
 
 }
