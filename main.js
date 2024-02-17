@@ -23,21 +23,25 @@ let operator = "";
 let secondNum = "";
 let displayValue = "";
 let check;
+let op = true;
 
 
 function getSum(num1,num2){
     input.textContent = num1 + num2;
     displayValue = input.textContent;
+    op = true;
 }
 
 function getDifference(num1,num2){
     input.textContent = num1 - num2;
     displayValue = input.textContent;
+    op = true;
 }
 
 function getProduct(num1,num2){
     input.textContent = num1 * num2;
     displayValue = input.textContent;
+    op = true;
 }
 
 function getQuotient(num1,num2){
@@ -50,6 +54,7 @@ function getQuotient(num1,num2){
         input.textContent = quotient;
         displayValue = quotient;
     }
+    op = true;
 }
 
 function operate(){
@@ -74,7 +79,7 @@ function operate(){
 
 function checkOperation(){
     const operation = displayValue.split(" ");
-     if (operation.length == 3){
+    if (operation.length == 3){
         return true;
     }
 }
@@ -206,36 +211,49 @@ add.addEventListener('click', () => {
     if (checkOperation()){
         operate();
     }
-    displayValue += " + ";
-    console.log(displayValue);
-    check = true;
+    if (op){
+        displayValue += " + ";
+        console.log(displayValue);
+        check = true;
+        op = false;
+    }
+    
 });
 
 minus.addEventListener('click', () => {
     if (checkOperation()){
         operate();
    }
-    displayValue += " - ";
-    console.log(displayValue);
-    check = true;
+   if (op){
+        displayValue += " - ";
+        console.log(displayValue);
+        check = true;
+        op = false;
+    }
 });
 
 multiply.addEventListener('click', () => {
     if (checkOperation()){
         operate();
    }
+   if (op){
     displayValue += " * ";
     console.log(displayValue);
     check = true;
+    op = false;
+    }
 });
 
 divide.addEventListener('click', () => {
     if (checkOperation()){
         operate();
    }
+   if (op){
     displayValue += " / ";
     console.log(displayValue);
     check = true;
+    op = false;
+    }  
 });
 
 
