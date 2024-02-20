@@ -91,6 +91,7 @@ del.addEventListener('click', () => {
     input.textContent = "";
     displayValue = "";
     check = false;
+    op = true;
 });
 
 zero.addEventListener('click', () =>{
